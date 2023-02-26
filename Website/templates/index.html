@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../static/styles.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sreality Web Scrape for Luxonis</h1>
+            <div class="card-container">
+            {% for listing in listings %}
+                <div class="card">
+                    <img src="{{ listing.img_url }}" alt="{{ listing.title }}">
+                    <h2 class="card-title">{{ listing.title }}</h2>
+                    <p class="card-description">{{ listing.description }}</p>
+                    <a href="#" class="button">Random Button LOL</a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
